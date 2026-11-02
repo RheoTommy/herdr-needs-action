@@ -1,0 +1,12 @@
+[workspace]
+resolver = "3"
+members = ["crates/needs-action", "crates/herdr-needs-action"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+repository = "https://github.com/RheoTommy/herdr-needs-action"
+
+[profile.release]
+strip = true

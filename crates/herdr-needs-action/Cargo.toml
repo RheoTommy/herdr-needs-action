@@ -1,0 +1,15 @@
+[package]
+name = "herdr-needs-action"
+description = "herdr plugin that marks agent panes as needing action until you handle them"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+anyhow = "1"
+needs-action = { path = "../needs-action" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "1"

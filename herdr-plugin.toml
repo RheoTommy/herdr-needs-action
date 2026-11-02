@@ -1,0 +1,32 @@
+id = "rheotommy.needs-action"
+name = "Needs Action"
+version = "0.1.0"
+# The only version it has been tested with.
+min_herdr_version = "0.9.5"
+description = "Mark agent panes as needing action until you handle them"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["cargo", "build", "--release", "--locked", "--bin", "herdr-needs-action"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["target/release/herdr-needs-action", "observe"]
+
+[[actions]]
+id = "toggle"
+title = "Toggle the needs-action mark"
+contexts = ["pane"]
+command = ["target/release/herdr-needs-action", "toggle"]
+
+[[actions]]
+id = "mark"
+title = "Mark as needing action"
+contexts = ["pane"]
+command = ["target/release/herdr-needs-action", "mark"]
+
+[[actions]]
+id = "clear"
+title = "Clear the needs-action mark"
+contexts = ["pane"]
+command = ["target/release/herdr-needs-action", "clear"]
