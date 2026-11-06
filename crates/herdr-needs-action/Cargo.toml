@@ -4,6 +4,7 @@ description = "herdr plugin that marks agent panes as needing action until you h
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
+license.workspace = true
 repository.workspace = true
 publish = false
 

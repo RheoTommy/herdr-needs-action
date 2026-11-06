@@ -6,6 +6,7 @@ members = ["crates/needs-action", "crates/herdr-needs-action"]
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.89"
+license = "MIT"
 repository = "https://github.com/RheoTommy/herdr-needs-action"
 
 [profile.release]

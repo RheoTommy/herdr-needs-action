@@ -39,6 +39,7 @@ rustPlatform.buildRustPackage {
   meta = {
     description = manifest.description;
     homepage = cargo.workspace.package.repository;
+    license = lib.licenses.mit;
     mainProgram = "herdr-needs-action";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
